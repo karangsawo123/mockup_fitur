@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ArmBase — Pencari Lawan Sparing</title>
+  <link rel="stylesheet" href="mockup-shared.css">
+  <style>
+    .member-card { display: flex; gap: 12px; padding: 14px; background: var(--canvas-soft); border: 1px solid var(--hairline); border-radius: 12px; margin: 0 16px 10px; }
+    .member-info { flex: 1; }
+    .member-name { font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.28px; }
+    .member-detail { font-size: 12px; color: var(--body); margin-top: 2px; }
+    .member-community { font-size: 12px; color: var(--mute); margin-top: 2px; }
+    .member-actions { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+    .badge-online { background: rgba(10, 124, 66, 0.15); color: #34d399; }
+    .badge-offline { background: rgba(107, 107, 128, 0.12); color: var(--mute); }
+    .filter-section { padding: 0 16px; margin-bottom: 16px; }
+    .filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div style="background: var(--canvas-soft); padding: 12px 16px; border-bottom: 1px solid var(--hairline); text-align: center;">
+    <a href="index.html" style="color: var(--link); font-size: 13px; text-decoration: none; font-weight: 500;">
+      ← Kembali ke Daftar Fitur
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-brand">Arm<span>Base</span></div>
+    <div class="navbar-icons">
+      <div class="navbar-icon">🔔</div>
+      <div class="navbar-icon">☰</div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-title">Cari Lawan Sparing</div>
+  </div>
+
+  <!-- Filter -->
+  <div class="filter-section">
+    <div class="filter-grid">
+      <div class="select-mock">70–75 kg</div>
+      <div class="select-mock">Menengah</div>
+    </div>
+    <div class="select-mock" style="width: 100%; justify-content: space-between; margin-bottom: 12px;">Surabaya</div>
+    <button class="btn-primary">Cari</button>
+  </div>
+
+  <div class="section-label">Lawan yang Cocok — 3 ditemukan</div>
+
+  <!-- Member Card 1 -->
+  <div class="member-card">
+    <div class="avatar">RP</div>
+    <div class="member-info">
+      <div class="member-name">Raka Pratama</div>
+      <div class="member-detail">73 kg · Menengah · Toproll</div>
+      <div class="member-community">ISPF Surabaya</div>
+      <div class="member-actions">
+        <span class="badge badge-online">Online</span>
+        <button class="btn-secondary btn-sm" style="width: auto;">Ajak Sparing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member Card 2 -->
+  <div class="member-card">
+    <div class="avatar">AS</div>
+    <div class="member-info">
+      <div class="member-name">Adi Surya</div>
+      <div class="member-detail">71 kg · Menengah · Hook</div>
+      <div class="member-community">Panco Surabaya</div>
+      <div class="member-actions">
+        <span class="badge badge-offline">Aktif 2 jam lalu</span>
+        <button class="btn-secondary btn-sm" style="width: auto;">Ajak Sparing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member Card 3 -->
+  <div class="member-card">
+    <div class="avatar">BS</div>
+    <div class="member-info">
+      <div class="member-name">Budi Santoso</div>
+      <div class="member-detail">74 kg · Menengah · Press</div>
+      <div class="member-community">ISPF Surabaya</div>
+      <div class="member-actions">
+        <span class="badge badge-online">Online</span>
+        <button class="btn-secondary btn-sm" style="width: auto;">Ajak Sparing</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 32px;"></div>
+</body>
+</html>

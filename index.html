@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ArmBase — Coba Fitur</title>
+  <link rel="stylesheet" href="mockup-shared.css">
+  <style>
+    body {
+      padding-bottom: var(--sp-xl);
+    }
+    
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px var(--sp-md) 32px;
+      border-bottom: 1px solid var(--hairline);
+      background: var(--canvas-soft);
+      margin-bottom: var(--sp-lg);
+    }
+
+    .hero-logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: var(--sp-md);
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.96px;
+      color: var(--ink);
+      margin-bottom: var(--sp-xs);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--body);
+      line-height: 22px;
+      max-width: 280px;
+    }
+
+    .section-container {
+      padding: 0 var(--sp-md) var(--sp-lg);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-sm);
+      margin-top: var(--sp-sm);
+    }
+
+    .feature-card {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-md);
+      background: var(--canvas-soft);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-lg);
+      padding: var(--sp-md);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--hairline-strong);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    
+    .feature-card:hover::before {
+      opacity: 1;
+    }
+    
+    .feature-card:active {
+      transform: scale(0.98);
+    }
+
+    .feature-icon-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--r-md);
+      background: rgba(59, 142, 255, 0.1);
+      border: 1px solid rgba(59, 142, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .feature-content {
+      flex: 1;
+    }
+
+    .feature-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+      letter-spacing: -0.2px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--body);
+      line-height: 18px;
+    }
+    
+    .feature-arrow {
+      color: var(--mute);
+      font-size: 16px;
+      margin-left: 4px;
+    }
+
+    .cta-container {
+      padding: 0 var(--sp-md);
+      margin-top: 16px;
+    }
+    
+    .cta-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      height: 48px;
+      background: var(--link);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: var(--r-pill);
+      text-decoration: none;
+      border: none;
+      box-shadow: 0 4px 14px rgba(59, 142, 255, 0.4);
+      transition: all 0.2s ease;
+    }
+    
+    .cta-button:hover {
+      background: var(--link-deep);
+      box-shadow: 0 6px 20px rgba(59, 142, 255, 0.5);
+      transform: translateY(-1px);
+    }
+    
+    .cta-button:active {
+      transform: scale(0.98);
+    }
+    
+    .cta-subtitle {
+      text-align: center;
+      font-size: 12px;
+      color: var(--mute);
+      margin-top: 12px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="hero-section">
+    <img src="logo.png" alt="ArmBase Logo" class="hero-logo">
+    <h1 class="hero-title">Experience ArmBase</h1>
+    <p class="hero-subtitle">Coba langsung fitur-fitur ArmBase sebelum mengisi kuesioner.</p>
+  </div>
+
+  <div class="section-container">
+    <div class="section-label" style="padding-left: 0; padding-right: 0; display: flex; justify-content: space-between; align-items: center;">
+      ✅ Sudah Pasti Ada
+    </div>
+    
+    <div class="grid-container">
+      <a href="06_kontak_pengurus_wa.html" class="feature-card">
+        <div class="feature-icon-wrapper">📱</div>
+        <div class="feature-content">
+          <div class="feature-title">Kontak Pengurus WA</div>
+          <div class="feature-desc">Hubungi ketua/senior komunitas langsung</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+      
+      <a href="07_direktori_basecamp_jadwal.html" class="feature-card">
+        <div class="feature-icon-wrapper">📍</div>
+        <div class="feature-content">
+          <div class="feature-title">Direktori Basecamp</div>
+          <div class="feature-desc">Cari lokasi latihan & jadwal terdekat</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+      
+      <a href="08_papan_info_event_lomba.html" class="feature-card">
+        <div class="feature-icon-wrapper">🏆</div>
+        <div class="feature-content">
+          <div class="feature-title">Info Event & Lomba</div>
+          <div class="feature-desc">Event & lomba arm wrestling terbaru</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="section-label" style="padding-left: 0; padding-right: 0; display: flex; justify-content: space-between; align-items: center;">
+      🔶 Bantu Pilih Prioritasnya!
+    </div>
+    
+    <div class="grid-container">
+      <a href="01_tracking_grafik_progres.html" class="feature-card">
+        <div class="feature-icon-wrapper">📊</div>
+        <div class="feature-content">
+          <div class="feature-title">Tracking Latihan</div>
+          <div class="feature-desc">Catat beban & lihat grafik progres</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+      
+      <a href="02_panduan_pemula_rekomendasi.html" class="feature-card">
+        <div class="feature-icon-wrapper">📖</div>
+        <div class="feature-content">
+          <div class="feature-title">Panduan Pemula</div>
+          <div class="feature-desc">Teknik & program latihan sesuai style</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+      
+      <a href="03_pencari_lawan_sparing.html" class="feature-card">
+        <div class="feature-icon-wrapper">🤝</div>
+        <div class="feature-content">
+          <div class="feature-title">Pencari Lawan Sparing</div>
+          <div class="feature-desc">Cari lawan sparing selevel & seberat</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+      
+      <a href="04_riwayat_ranking_supermatch.html" class="feature-card">
+        <div class="feature-icon-wrapper">🏅</div>
+        <div class="feature-content">
+          <div class="feature-title">Ranking Supermatch</div>
+          <div class="feature-desc">Leaderboard lokal & catatan tanding</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+      
+      <a href="05_panduan_rehab_cedera.html" class="feature-card">
+        <div class="feature-icon-wrapper">🩹</div>
+        <div class="feature-content">
+          <div class="feature-title">Panduan Rehab Cedera</div>
+          <div class="feature-desc">Tips pemulihan nyeri sendi & tendon</div>
+        </div>
+        <div class="feature-arrow">→</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="cta-container">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSePr3avlJhbw--iCud2xzFFPT0WVsM0hc8czAwdb1kWFpTDTA/viewform?usp=header" target="_blank" class="cta-button">
+      Sudah Coba? Yuk Isi Kuesioner →
+    </a>
+    <div class="cta-subtitle">Bantu kami membangun platform ini.</div>
+  </div>
+
+</body>
+</html>

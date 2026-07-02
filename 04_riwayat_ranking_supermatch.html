@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ArmBase — Riwayat & Ranking Supermatch</title>
+  <link rel="stylesheet" href="mockup-shared.css">
+  <style>
+    .match-card { display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--canvas-soft); border: 1px solid var(--hairline); border-radius: 8px; margin: 0 16px 8px; font-size: 13px; }
+    .match-vs { font-weight: 600; color: var(--ink); flex: 1; line-height: 18px; }
+    .match-score { font-size: 16px; font-weight: 700; color: var(--link); flex-shrink: 0; }
+    .match-meta { font-size: 11px; color: var(--mute); margin-top: 2px; }
+  </style>
+</head>
+<body>
+  <div style="background: var(--canvas-soft); padding: 12px 16px; border-bottom: 1px solid var(--hairline); text-align: center;">
+    <a href="index.html" style="color: var(--link); font-size: 13px; text-decoration: none; font-weight: 500;">
+      ← Kembali ke Daftar Fitur
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-brand">Arm<span>Base</span></div>
+    <div class="navbar-icons">
+      <div class="navbar-icon">🔔</div>
+      <div class="navbar-icon">☰</div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-title">Ranking & Supermatch</div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab tab-active">Ranking</div>
+    <div class="tab">Riwayat Supermatch</div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filter-row" style="margin-bottom: 16px;">
+    <div class="select-mock">70–75 kg</div>
+    <div class="select-mock">Surabaya</div>
+  </div>
+
+  <!-- Podium -->
+  <div class="podium">
+    <div class="podium-item podium-2">
+      <div class="podium-rank">🥈</div>
+      <div class="podium-name">Adi Surya</div>
+      <div class="podium-stats">W:10 L:3</div>
+      <div class="podium-score">1720</div>
+    </div>
+    <div class="podium-item podium-1">
+      <div class="podium-rank">🥇</div>
+      <div class="podium-name">Raka Pratama</div>
+      <div class="podium-stats">W:12 L:2</div>
+      <div class="podium-score">1850</div>
+    </div>
+    <div class="podium-item podium-3">
+      <div class="podium-rank">🥉</div>
+      <div class="podium-name">Budi Santoso</div>
+      <div class="podium-stats">W:9 L:4</div>
+      <div class="podium-score">1650</div>
+    </div>
+  </div>
+
+  <!-- List -->
+  <div class="list-item">
+    <div class="list-rank">#4</div>
+    <div class="avatar avatar-sm">DA</div>
+    <div style="flex:1;">
+      <div class="card-title">Dimas Arifin</div>
+      <div class="card-meta">W:8 L:5</div>
+    </div>
+    <div style="font-size: 14px; font-weight: 600; color: var(--ink);">1580</div>
+  </div>
+  <div class="list-item">
+    <div class="list-rank">#5</div>
+    <div class="avatar avatar-sm">FH</div>
+    <div style="flex:1;">
+      <div class="card-title">Fajar Hidayat</div>
+      <div class="card-meta">W:7 L:5</div>
+    </div>
+    <div style="font-size: 14px; font-weight: 600; color: var(--ink);">1520</div>
+  </div>
+
+  <!-- Riwayat Supermatch preview -->
+  <div class="section-label" style="margin-top: 8px;">Supermatch Terbaru</div>
+  <div class="match-card">
+    <div>
+      <div class="match-vs">Raka Pratama vs Adi Surya</div>
+      <div class="match-meta">28 Jun 2026 · Best of 5 · Kanan</div>
+    </div>
+    <div class="match-score">3:1</div>
+  </div>
+  <div class="match-card">
+    <div>
+      <div class="match-vs">Budi Santoso vs Dimas Arifin</div>
+      <div class="match-meta">25 Jun 2026 · Best of 5 · Kanan</div>
+    </div>
+    <div class="match-score">3:2</div>
+  </div>
+
+  <div style="height: 32px;"></div>
+</body>
+</html>

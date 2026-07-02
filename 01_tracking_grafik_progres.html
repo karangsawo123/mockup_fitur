@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ArmBase — Tracking Latihan & Grafik Progres</title>
+  <link rel="stylesheet" href="mockup-shared.css">
+  <style>
+    .chart-svg { width: 100%; height: 140px; }
+    .chart-svg .line-blue { stroke: var(--link); stroke-width: 2; fill: none; }
+    .chart-svg .line-cyan { stroke: #29bc9b; stroke-width: 2; fill: none; }
+    .chart-svg .area-blue { fill: url(#gradBlue); }
+    .chart-svg .area-cyan { fill: url(#gradCyan); }
+    .chart-svg .axis-line { stroke: var(--hairline); stroke-width: 1; }
+    .chart-svg text { font-family: 'Inter', sans-serif; font-size: 10px; fill: var(--mute); }
+    .chart-tooltip {
+      position: absolute; top: 24px; right: 16px;
+      background: var(--canvas-soft-2); color: var(--ink); font-size: 11px;
+      padding: 4px 8px; border-radius: 6px;
+      line-height: 16px;
+    }
+    .chart-legend { display: flex; gap: 16px; margin-top: 8px; }
+    .chart-legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--mute); }
+    .chart-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .recorded-list { padding: 0 16px; margin-bottom: 16px; }
+    .recorded-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 12px; background: var(--canvas-soft); border: 1px solid var(--hairline);
+      border-radius: 8px; margin-bottom: 8px; font-size: 13px;
+    }
+    .recorded-item-name { font-weight: 500; color: var(--ink); }
+    .recorded-item-detail { color: var(--mute); font-size: 12px; }
+    .stepper { display: flex; align-items: center; gap: 8px; }
+    .stepper-btn {
+      width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--hairline);
+      background: var(--canvas-soft-2); font-size: 16px; color: var(--ink); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .stepper-value { font-size: 16px; font-weight: 600; color: var(--ink); min-width: 40px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div style="background: var(--canvas-soft); padding: 12px 16px; border-bottom: 1px solid var(--hairline); text-align: center;">
+    <a href="index.html" style="color: var(--link); font-size: 13px; text-decoration: none; font-weight: 500;">
+      ← Kembali ke Daftar Fitur
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Arm<span>Base</span></div>
+    <div class="navbar-icons">
+      <div class="navbar-icon">🔔</div>
+      <div class="navbar-icon">☰</div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-title">Catat & Pantau Latihan</div>
+    <div class="page-date">Senin, 30 Juni 2026</div>
+  </div>
+
+  <!-- Form Input Section -->
+  <div class="form-group">
+    <label class="form-label">Jenis Latihan</label>
+    <div class="select-mock" style="width:100%; justify-content: space-between;">Wrist Curl</div>
+  </div>
+
+  <div style="padding: 0 16px; margin-bottom: 12px;">
+    <div class="form-input-row">
+      <div class="form-group">
+        <label class="form-label">Beban</label>
+        <div class="stepper">
+          <div class="stepper-btn">−</div>
+          <div class="stepper-value">15 kg</div>
+          <div class="stepper-btn">+</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Repetisi</label>
+        <input class="form-input" value="12 reps" readonly style="text-align:center;">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Set</label>
+        <input class="form-input" value="3 set" readonly style="text-align:center;">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Tangan</label>
+    <div class="select-mock" style="width:100%; justify-content: space-between;">Kanan</div>
+  </div>
+
+  <div style="padding: 0 16px; margin-bottom: 20px;">
+    <button class="btn-primary">Simpan Latihan</button>
+  </div>
+
+  <!-- Recorded Today -->
+  <div class="section-label">Latihan Hari Ini</div>
+  <div class="recorded-list">
+    <div class="recorded-item">
+      <div>
+        <div class="recorded-item-name">Wrist Curl</div>
+        <div class="recorded-item-detail">15kg × 12 reps × 3 set</div>
+      </div>
+      <span class="badge badge-mute">Kanan</span>
+    </div>
+    <div class="recorded-item">
+      <div>
+        <div class="recorded-item-name">Pronation</div>
+        <div class="recorded-item-detail">10kg × 15 reps × 3 set</div>
+      </div>
+      <span class="badge badge-mute">Kedua</span>
+    </div>
+    <div class="recorded-item">
+      <div>
+        <div class="recorded-item-name">Cupping</div>
+        <div class="recorded-item-detail">8kg × 20 reps × 2 set</div>
+      </div>
+      <span class="badge badge-mute">Kiri</span>
+    </div>
+  </div>
+
+  <!-- Grafik Progres Section -->
+  <div class="section-label">Progres Kekuatan</div>
+  <div class="tabs">
+    <div class="tab">Minggu Ini</div>
+    <div class="tab tab-active">Bulan Ini</div>
+    <div class="tab">3 Bulan</div>
+  </div>
+
+  <div class="chart-area">
+    <div class="chart-tooltip">Wrist Curl: 18kg<br>+3kg dari awal bulan</div>
+    <svg class="chart-svg" viewBox="0 0 320 140" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="gradBlue" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3b8eff" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#3b8eff" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="gradCyan" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#29bc9b" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#29bc9b" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- Grid lines -->
+      <line class="axis-line" x1="0" y1="35" x2="320" y2="35"/>
+      <line class="axis-line" x1="0" y1="70" x2="320" y2="70"/>
+      <line class="axis-line" x1="0" y1="105" x2="320" y2="105"/>
+      <!-- Area fills -->
+      <path class="area-blue" d="M0,105 L40,100 L80,90 L120,85 L160,75 L200,65 L240,50 L280,40 L320,30 L320,140 L0,140 Z"/>
+      <path class="area-cyan" d="M0,115 L40,112 L80,108 L120,105 L160,100 L200,95 L240,88 L280,82 L320,75 L320,140 L0,140 Z"/>
+      <!-- Lines -->
+      <polyline class="line-blue" points="0,105 40,100 80,90 120,85 160,75 200,65 240,50 280,40 320,30"/>
+      <polyline class="line-cyan" points="0,115 40,112 80,108 120,105 160,100 200,95 240,88 280,82 320,75"/>
+      <!-- Endpoint dots -->
+      <circle cx="320" cy="30" r="4" fill="#3b8eff"/>
+      <circle cx="320" cy="75" r="4" fill="#29bc9b"/>
+      <!-- Axis labels -->
+      <text x="0" y="136">1 Jun</text>
+      <text x="100" y="136">10 Jun</text>
+      <text x="210" y="136">20 Jun</text>
+      <text x="290" y="136">30 Jun</text>
+    </svg>
+    <div class="chart-legend">
+      <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#3b8eff;"></div>Wrist Curl</div>
+      <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#29bc9b;"></div>Pronation</div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-value">14</div>
+      <div class="stat-label">Total Sesi</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">16.5</div>
+      <div class="stat-label">Rata-rata (kg)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="font-size: 13px; padding-top: 3px;">Wrist Curl</div>
+      <div class="stat-label">Terfavorit</div>
+    </div>
+  </div>
+
+  <div style="height: 32px;"></div>
+</body>
+</html>

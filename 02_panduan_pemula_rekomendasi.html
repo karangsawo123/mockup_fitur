@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ArmBase — Panduan Pemula & Rekomendasi Program</title>
+  <link rel="stylesheet" href="mockup-shared.css">
+  <style>
+    .style-badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 100px; font-size: 12px; font-weight: 500; background: rgba(59, 142, 255, 0.12); color: var(--link); margin: 0 16px 16px; }
+    .rec-card { display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: var(--canvas-soft); border: 1px solid var(--hairline); border-radius: 8px; margin-bottom: 8px; }
+    .rec-card-content { flex: 1; }
+    .rec-card-name { font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.28px; }
+    .rec-card-desc { font-size: 12px; color: var(--body); margin-top: 2px; line-height: 16px; }
+    .rec-card-meta { font-size: 11px; color: var(--mute); margin-top: 4px; }
+    .tip-item { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; color: var(--body); line-height: 18px; margin-bottom: 8px; }
+    .tip-icon { flex-shrink: 0; width: 18px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div style="background: var(--canvas-soft); padding: 12px 16px; border-bottom: 1px solid var(--hairline); text-align: center;">
+    <a href="index.html" style="color: var(--link); font-size: 13px; text-decoration: none; font-weight: 500;">
+      ← Kembali ke Daftar Fitur
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-brand">Arm<span>Base</span></div>
+    <div class="navbar-icons">
+      <div class="navbar-icon">🔔</div>
+      <div class="navbar-icon">☰</div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-title">Panduan & Rekomendasi</div>
+    <div class="page-subtitle">Belajar dari nol dan dapatkan program latihan sesuai style kamu</div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-container">
+    <div class="progress-label">Tahap 1 dari 4</div>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" style="width: 25%;"></div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot-col">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="card-title">Postur & Grip Dasar</div>
+        <div class="card-desc">Pelajari cara berdiri, posisi siku, dan grip yang benar</div>
+        <span class="badge badge-blue mt-xs" style="margin-top: 6px; display: inline-flex;">Sedang Dipelajari</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot-col">
+        <div class="timeline-dot timeline-dot-locked"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content timeline-content-locked">
+        <div class="card-title">Mengenal 4 Style</div>
+        <div class="card-desc">Toproll, Hook, Press, Kingsmove — mana yang cocok?</div>
+        <span class="badge badge-mute mt-xs" style="margin-top: 6px; display: inline-flex;">Terkunci</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot-col">
+        <div class="timeline-dot timeline-dot-locked"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content timeline-content-locked">
+        <div class="card-title">Latihan Dasar Pemula</div>
+        <div class="card-desc">Program 4 minggu untuk membangun fondasi kekuatan</div>
+        <span class="badge badge-mute mt-xs" style="margin-top: 6px; display: inline-flex;">Terkunci</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot-col">
+        <div class="timeline-dot timeline-dot-locked"></div>
+      </div>
+      <div class="timeline-content timeline-content-locked">
+        <div class="card-title">Siap Sparing Pertama</div>
+        <div class="card-desc">Tips dan mental preparation sebelum sparing</div>
+        <span class="badge badge-mute mt-xs" style="margin-top: 6px; display: inline-flex;">Terkunci</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 16px; margin-bottom: 20px;">
+    <button class="btn-primary">Mulai Tahap 1</button>
+  </div>
+
+  <!-- Style Selector -->
+  <div class="section-label">Pilih Style Dominan Kamu</div>
+  <div class="grid-2x2">
+    <div class="grid-card grid-card-active">
+      <div class="grid-card-icon">↗</div>
+      <div class="grid-card-label">Toproll</div>
+    </div>
+    <div class="grid-card">
+      <div class="grid-card-icon">🪝</div>
+      <div class="grid-card-label">Hook</div>
+    </div>
+    <div class="grid-card">
+      <div class="grid-card-icon">↓</div>
+      <div class="grid-card-label">Press</div>
+    </div>
+    <div class="grid-card">
+      <div class="grid-card-icon">👑</div>
+      <div class="grid-card-label">Kingsmove</div>
+    </div>
+  </div>
+
+  <div class="style-badge">Style Aktif: Toproll</div>
+
+  <!-- Rekomendasi Program -->
+  <div class="section-label">Program Latihan untuk Toproll</div>
+  <div style="padding: 0 16px; margin-bottom: 16px;">
+    <div class="rec-card">
+      <div class="rec-card-content">
+        <div class="rec-card-name">Pronation Drill</div>
+        <div class="rec-card-desc">Melatih rotasi pergelangan ke dalam</div>
+        <div class="rec-card-meta">3 set × 15 reps</div>
+      </div>
+      <span class="tag tag-red">Wajib</span>
+    </div>
+    <div class="rec-card">
+      <div class="rec-card-content">
+        <div class="rec-card-name">Back Pressure</div>
+        <div class="rec-card-desc">Membangun tarikan ke belakang</div>
+        <div class="rec-card-meta">3 set × 12 reps</div>
+      </div>
+      <span class="tag tag-yellow">Utama</span>
+    </div>
+    <div class="rec-card">
+      <div class="rec-card-content">
+        <div class="rec-card-name">Rising</div>
+        <div class="rec-card-desc">Melatih gerakan naik saat toproll attack</div>
+        <div class="rec-card-meta">4 set × 10 reps</div>
+      </div>
+      <span class="tag tag-cyan">Pendukung</span>
+    </div>
+  </div>
+
+  <div style="padding: 0 16px; margin-bottom: 20px;">
+    <button class="btn-primary">Mulai Program Ini</button>
+  </div>
+
+  <!-- Tips Keamanan -->
+  <div class="warning-card">
+    <div style="font-weight: 600; margin-bottom: 6px;">⚠ Tips Keamanan</div>
+    <div class="tip-item"><span class="tip-icon">•</span>Selalu pemanasan 10 menit sebelum sparing</div>
+    <div class="tip-item"><span class="tip-icon">•</span>Jangan pernah arm wrestling tanpa postur yang benar — risiko cedera tinggi</div>
+  </div>
+
+  <div style="height: 32px;"></div>
+</body>
+</html>

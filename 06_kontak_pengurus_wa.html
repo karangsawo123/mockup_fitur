@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ArmBase — Kontak Pengurus Komunitas via WA</title>
+  <link rel="stylesheet" href="mockup-shared.css">
+  <style>
+    .senior-card { display: flex; gap: 12px; padding: 14px; background: var(--canvas-soft); border: 1px solid var(--hairline); border-radius: 12px; margin: 0 16px 10px; }
+    .senior-info { flex: 1; }
+    .senior-name { font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.28px; }
+    .senior-detail { font-size: 12px; color: var(--body); margin-top: 3px; line-height: 17px; }
+    .senior-help { font-size: 12px; color: var(--mute); margin-top: 3px; }
+    .btn-wa {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      height: 36px; padding: 0 14px; background: #25D366; color: white;
+      font-size: 13px; font-weight: 500; border-radius: 100px; border: none;
+      cursor: pointer; margin-top: 10px; width: 100%;
+    }
+    .wa-icon { font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div style="background: var(--canvas-soft); padding: 12px 16px; border-bottom: 1px solid var(--hairline); text-align: center;">
+    <a href="index.html" style="color: var(--link); font-size: 13px; text-decoration: none; font-weight: 500;">
+      ← Kembali ke Daftar Fitur
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-brand">Arm<span>Base</span></div>
+    <div class="navbar-icons">
+      <div class="navbar-icon">🔔</div>
+      <div class="navbar-icon">☰</div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-title">Hubungi Pengurus Komunitas</div>
+    <div class="page-subtitle">Siap bergabung? Langsung hubungi ketua/senior komunitas terdekat via WhatsApp.</div>
+  </div>
+
+  <!-- Filter -->
+  <div style="padding: 0 16px; margin-bottom: 16px;">
+    <div class="select-mock" style="width: 100%; justify-content: space-between;">Kota: Surabaya</div>
+  </div>
+
+  <!-- Senior Card 1 -->
+  <div class="senior-card">
+    <div class="avatar">HW</div>
+    <div class="senior-info">
+      <div class="senior-name">Hadi Wibowo</div>
+      <span class="badge badge-blue" style="margin-top: 4px;">Ketua ISPF Surabaya</span>
+      <div class="senior-detail">Pengalaman: 8 tahun · Style: Toproll</div>
+      <div class="senior-help">Bisa bantu: Latihan, Event, Komunitas</div>
+      <button class="btn-wa"><span class="wa-icon">📱</span>Chat via WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- Senior Card 2 -->
+  <div class="senior-card">
+    <div class="avatar">SR</div>
+    <div class="senior-info">
+      <div class="senior-name">Surya Ramadhan</div>
+      <span class="badge badge-cyan" style="margin-top: 4px;">Pelatih Senior</span>
+      <div class="senior-detail">Pengalaman: 6 tahun · Style: Hook</div>
+      <div class="senior-help">Bisa bantu: Teknik, Cedera/Rehab</div>
+      <button class="btn-wa"><span class="wa-icon">📱</span>Chat via WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- Senior Card 3 -->
+  <div class="senior-card">
+    <div class="avatar">TP</div>
+    <div class="senior-info">
+      <div class="senior-name">Teguh Prasetyo</div>
+      <span class="badge badge-blue" style="margin-top: 4px;">Wakil Ketua ISPF Malang</span>
+      <div class="senior-detail">Pengalaman: 5 tahun · Style: Press</div>
+      <div class="senior-help">Bisa bantu: Latihan, Sparing</div>
+      <button class="btn-wa"><span class="wa-icon">📱</span>Chat via WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="footer-note">Hubungi di jam wajar ya (08.00–21.00). Senior juga manusia 😊</div>
+
+  <div style="height: 16px;"></div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ArmBase — Papan Info Event & Lomba</title>
+  <link rel="stylesheet" href="mockup-shared.css">
+  <style>
+    .event-card { padding: 14px; background: var(--canvas-soft); border: 1px solid var(--hairline); border-radius: 12px; margin: 0 16px 10px; }
+    .event-card-highlight { border-color: var(--link); box-shadow: 0 0 0 1px var(--link); }
+    .event-title { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -0.3px; margin: 8px 0 8px; line-height: 20px; }
+    .event-row { display: flex; align-items: flex-start; gap: 6px; font-size: 12px; color: var(--body); line-height: 17px; margin-bottom: 5px; }
+    .event-icon { flex-shrink: 0; width: 16px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div style="background: var(--canvas-soft); padding: 12px 16px; border-bottom: 1px solid var(--hairline); text-align: center;">
+    <a href="index.html" style="color: var(--link); font-size: 13px; text-decoration: none; font-weight: 500;">
+      ← Kembali ke Daftar Fitur
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-brand">Arm<span>Base</span></div>
+    <div class="navbar-icons">
+      <div class="navbar-icon">🔔</div>
+      <div class="navbar-icon">☰</div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-title">Event & Lomba</div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab tab-active">Mendatang</div>
+    <div class="tab">Selesai</div>
+  </div>
+
+  <!-- Event Card 1 (Highlight) -->
+  <div class="event-card event-card-highlight">
+    <span class="badge badge-blue">Mendatang</span>
+    <div class="event-title">Kejuaraan Nasional Arm Wrestling 2026</div>
+    <div class="event-row"><span class="event-icon">📅</span>15–16 Agustus 2026</div>
+    <div class="event-row"><span class="event-icon">📍</span>GOR Sidoarjo, Jawa Timur</div>
+    <div class="event-row"><span class="event-icon">🏋️</span>Kategori: U-65, U-70, U-75, U-80, U-90, +90 kg</div>
+    <button class="btn-primary btn-sm" style="width: 100%; margin-top: 10px;">Lihat Detail & Daftar</button>
+  </div>
+
+  <!-- Event Card 2 -->
+  <div class="event-card">
+    <span class="badge badge-blue">Mendatang</span>
+    <div class="event-title">Supermatch Surabaya Open</div>
+    <div class="event-row"><span class="event-icon">📅</span>20 Juli 2026</div>
+    <div class="event-row"><span class="event-icon">📍</span>Basecamp ISPF Surabaya</div>
+    <div class="event-row"><span class="event-icon">🏋️</span>Kategori: Bebas (challenge system)</div>
+    <button class="btn-secondary btn-sm" style="width: 100%; margin-top: 10px;">Lihat Detail</button>
+  </div>
+
+  <!-- Event Card 3 -->
+  <div class="event-card">
+    <span class="badge badge-yellow">1 Minggu Lagi</span>
+    <div class="event-title">Sparing Akbar Komunitas Panco Jatim</div>
+    <div class="event-row"><span class="event-icon">📅</span>7 Juli 2026</div>
+    <div class="event-row"><span class="event-icon">📍</span>Taman Bungkul, Surabaya</div>
+    <div class="event-row"><span class="event-icon">🏋️</span>Kategori: Pemula, Menengah, Kompetitif</div>
+    <button class="btn-secondary btn-sm" style="width: 100%; margin-top: 10px;">Lihat Detail</button>
+  </div>
+
+  <div style="height: 32px;"></div>
+</body>
+</html>
